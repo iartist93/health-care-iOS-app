@@ -9,11 +9,37 @@
 /* Begin PBXBuildFile section */
 		4823607B1AF6DC300049EF0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4823607A1AF6DC300049EF0B /* AppDelegate.swift */; };
 		4823607E1AF6DC300049EF0B /* HealthCareProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4823607C1AF6DC300049EF0B /* HealthCareProject.xcdatamodeld */; };
-		482360801AF6DC300049EF0B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4823607F1AF6DC300049EF0B /* ViewController.swift */; };
 		482360831AF6DC300049EF0B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 482360811AF6DC300049EF0B /* Main.storyboard */; };
 		482360851AF6DC300049EF0B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 482360841AF6DC300049EF0B /* Images.xcassets */; };
 		482360881AF6DC300049EF0B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 482360861AF6DC300049EF0B /* LaunchScreen.xib */; };
 		482360941AF6DC310049EF0B /* HealthCareProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482360931AF6DC310049EF0B /* HealthCareProjectTests.swift */; };
+		4823609E1AF6F0930049EF0B /* DrugsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4823609D1AF6F0930049EF0B /* DrugsTableViewController.swift */; };
+		482360A01AF6F0C60049EF0B /* Drug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4823609F1AF6F0C60049EF0B /* Drug.swift */; };
+		48529F9E1AF8FB2D00141A63 /* DoctorLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48529F9D1AF8FB2D00141A63 /* DoctorLoginViewController.swift */; };
+		48529FA01AF8FB5200141A63 /* DocotorRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48529F9F1AF8FB5200141A63 /* DocotorRegisterViewController.swift */; };
+		48529FA61AF8FC5600141A63 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48529FA31AF8FC5600141A63 /* Bolts.framework */; };
+		48529FA81AF8FC5600141A63 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48529FA51AF8FC5600141A63 /* ParseUI.framework */; };
+		48529FAA1AF8FC6700141A63 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48529FA91AF8FC6700141A63 /* AudioToolbox.framework */; };
+		48529FAC1AF8FC6E00141A63 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48529FAB1AF8FC6E00141A63 /* CFNetwork.framework */; };
+		48529FAE1AF8FC7400141A63 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48529FAD1AF8FC7400141A63 /* CoreGraphics.framework */; };
+		48529FB01AF8FC7B00141A63 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48529FAF1AF8FC7B00141A63 /* CoreLocation.framework */; };
+		48529FB21AF8FC8200141A63 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48529FB11AF8FC8200141A63 /* MobileCoreServices.framework */; };
+		48529FB41AF8FC8800141A63 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48529FB31AF8FC8800141A63 /* QuartzCore.framework */; };
+		48529FB61AF8FC8E00141A63 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48529FB51AF8FC8E00141A63 /* Security.framework */; };
+		48529FB81AF8FC9300141A63 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48529FB71AF8FC9300141A63 /* StoreKit.framework */; };
+		48529FBA1AF8FC9900141A63 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48529FB91AF8FC9900141A63 /* SystemConfiguration.framework */; };
+		48529FBC1AF8FC9E00141A63 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 48529FBB1AF8FC9E00141A63 /* libz.dylib */; };
+		48529FBE1AF8FCA600141A63 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 48529FBD1AF8FCA600141A63 /* libsqlite3.dylib */; };
+		48529FC01AF8FCAB00141A63 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48529FBF1AF8FCAB00141A63 /* Accounts.framework */; };
+		48529FC21AF8FCB100141A63 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48529FC11AF8FCB100141A63 /* Social.framework */; };
+		48529FC51AF91C0600141A63 /* DoctorsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48529FC41AF91C0600141A63 /* DoctorsTableViewController.swift */; };
+		48529FC71AF91EAB00141A63 /* DoctorsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48529FC61AF91EAB00141A63 /* DoctorsTableViewCell.swift */; };
+		48529FC91AF924F800141A63 /* Doctor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48529FC81AF924F800141A63 /* Doctor.swift */; };
+		48529FCB1AF928F800141A63 /* DoctorDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48529FCA1AF928F800141A63 /* DoctorDetailsViewController.swift */; };
+		4861D7ED1AF7D4FA001C6BDC /* AddDrugTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4861D7EC1AF7D4FA001C6BDC /* AddDrugTableViewController.swift */; };
+		4861D7EF1AF7FBAF001C6BDC /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4861D7EE1AF7FBAF001C6BDC /* DetailsViewController.swift */; };
+		4861D84A1AF84683001C6BDC /* AddToMyListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4861D8491AF84683001C6BDC /* AddToMyListTableViewController.swift */; };
+		48EF9FE91AFA946D00164286 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48529FA41AF8FC5600141A63 /* Parse.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,13 +57,40 @@
 		482360791AF6DC300049EF0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4823607A1AF6DC300049EF0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4823607D1AF6DC300049EF0B /* HealthCareProject.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HealthCareProject.xcdatamodel; sourceTree = "<group>"; };
-		4823607F1AF6DC300049EF0B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		482360821AF6DC300049EF0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		482360841AF6DC300049EF0B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		482360871AF6DC300049EF0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		4823608D1AF6DC300049EF0B /* HealthCareProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HealthCareProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		482360921AF6DC310049EF0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		482360931AF6DC310049EF0B /* HealthCareProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthCareProjectTests.swift; sourceTree = "<group>"; };
+		4823609D1AF6F0930049EF0B /* DrugsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DrugsTableViewController.swift; path = ../DrugsTableViewController.swift; sourceTree = "<group>"; };
+		4823609F1AF6F0C60049EF0B /* Drug.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Drug.swift; sourceTree = "<group>"; };
+		48529F9D1AF8FB2D00141A63 /* DoctorLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctorLoginViewController.swift; sourceTree = "<group>"; };
+		48529F9F1AF8FB5200141A63 /* DocotorRegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocotorRegisterViewController.swift; sourceTree = "<group>"; };
+		48529FA11AF8FC3F00141A63 /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseCrashReporting.framework; path = "../../../Desktop/NEW MACBOOK/Development/iOS/Video Tutorials/Parse login/parse-library-1.7.2/ParseCrashReporting.framework"; sourceTree = "<group>"; };
+		48529FA31AF8FC5600141A63 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "../../../Desktop/NEW MACBOOK/Development/iOS/Video Tutorials/Parse login/parse-library-1.7.2/Bolts.framework"; sourceTree = "<group>"; };
+		48529FA41AF8FC5600141A63 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "../../../Desktop/NEW MACBOOK/Development/iOS/Video Tutorials/Parse login/parse-library-1.7.2/Parse.framework"; sourceTree = "<group>"; };
+		48529FA51AF8FC5600141A63 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = "../../../Desktop/NEW MACBOOK/Development/iOS/Video Tutorials/Parse login/parse-library-1.7.2/ParseUI.framework"; sourceTree = "<group>"; };
+		48529FA91AF8FC6700141A63 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		48529FAB1AF8FC6E00141A63 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		48529FAD1AF8FC7400141A63 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		48529FAF1AF8FC7B00141A63 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		48529FB11AF8FC8200141A63 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		48529FB31AF8FC8800141A63 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		48529FB51AF8FC8E00141A63 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		48529FB71AF8FC9300141A63 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		48529FB91AF8FC9900141A63 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		48529FBB1AF8FC9E00141A63 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		48529FBD1AF8FCA600141A63 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		48529FBF1AF8FCAB00141A63 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		48529FC11AF8FCB100141A63 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		48529FC41AF91C0600141A63 /* DoctorsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctorsTableViewController.swift; sourceTree = "<group>"; };
+		48529FC61AF91EAB00141A63 /* DoctorsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctorsTableViewCell.swift; sourceTree = "<group>"; };
+		48529FC81AF924F800141A63 /* Doctor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Doctor.swift; sourceTree = "<group>"; };
+		48529FCA1AF928F800141A63 /* DoctorDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctorDetailsViewController.swift; sourceTree = "<group>"; };
+		4861D7EC1AF7D4FA001C6BDC /* AddDrugTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddDrugTableViewController.swift; sourceTree = "<group>"; };
+		4861D7EE1AF7FBAF001C6BDC /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		4861D8491AF84683001C6BDC /* AddToMyListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddToMyListTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +98,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48529FC21AF8FCB100141A63 /* Social.framework in Frameworks */,
+				48529FC01AF8FCAB00141A63 /* Accounts.framework in Frameworks */,
+				48529FBE1AF8FCA600141A63 /* libsqlite3.dylib in Frameworks */,
+				48529FBC1AF8FC9E00141A63 /* libz.dylib in Frameworks */,
+				48529FBA1AF8FC9900141A63 /* SystemConfiguration.framework in Frameworks */,
+				48529FB81AF8FC9300141A63 /* StoreKit.framework in Frameworks */,
+				48529FB61AF8FC8E00141A63 /* Security.framework in Frameworks */,
+				48529FB41AF8FC8800141A63 /* QuartzCore.framework in Frameworks */,
+				48529FB21AF8FC8200141A63 /* MobileCoreServices.framework in Frameworks */,
+				48EF9FE91AFA946D00164286 /* Parse.framework in Frameworks */,
+				48529FB01AF8FC7B00141A63 /* CoreLocation.framework in Frameworks */,
+				48529FAE1AF8FC7400141A63 /* CoreGraphics.framework in Frameworks */,
+				48529FAC1AF8FC6E00141A63 /* CFNetwork.framework in Frameworks */,
+				48529FAA1AF8FC6700141A63 /* AudioToolbox.framework in Frameworks */,
+				48529FA61AF8FC5600141A63 /* Bolts.framework in Frameworks */,
+				48529FA81AF8FC5600141A63 /* ParseUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +130,23 @@
 		4823606C1AF6DC300049EF0B = {
 			isa = PBXGroup;
 			children = (
+				48529FC11AF8FCB100141A63 /* Social.framework */,
+				48529FBF1AF8FCAB00141A63 /* Accounts.framework */,
+				48529FBD1AF8FCA600141A63 /* libsqlite3.dylib */,
+				48529FBB1AF8FC9E00141A63 /* libz.dylib */,
+				48529FB91AF8FC9900141A63 /* SystemConfiguration.framework */,
+				48529FB71AF8FC9300141A63 /* StoreKit.framework */,
+				48529FB51AF8FC8E00141A63 /* Security.framework */,
+				48529FB31AF8FC8800141A63 /* QuartzCore.framework */,
+				48529FB11AF8FC8200141A63 /* MobileCoreServices.framework */,
+				48529FAF1AF8FC7B00141A63 /* CoreLocation.framework */,
+				48529FAD1AF8FC7400141A63 /* CoreGraphics.framework */,
+				48529FAB1AF8FC6E00141A63 /* CFNetwork.framework */,
+				48529FA91AF8FC6700141A63 /* AudioToolbox.framework */,
+				48529FA31AF8FC5600141A63 /* Bolts.framework */,
+				48529FA41AF8FC5600141A63 /* Parse.framework */,
+				48529FA51AF8FC5600141A63 /* ParseUI.framework */,
+				48529FA11AF8FC3F00141A63 /* ParseCrashReporting.framework */,
 				482360771AF6DC300049EF0B /* HealthCareProject */,
 				482360901AF6DC310049EF0B /* HealthCareProjectTests */,
 				482360761AF6DC300049EF0B /* Products */,
@@ -79,12 +165,9 @@
 		482360771AF6DC300049EF0B /* HealthCareProject */ = {
 			isa = PBXGroup;
 			children = (
-				4823607A1AF6DC300049EF0B /* AppDelegate.swift */,
-				4823607F1AF6DC300049EF0B /* ViewController.swift */,
+				48529FCD1AF92A9F00141A63 /* Drug */,
+				48529FCC1AF92A2A00141A63 /* Doctor */,
 				482360811AF6DC300049EF0B /* Main.storyboard */,
-				482360841AF6DC300049EF0B /* Images.xcassets */,
-				482360861AF6DC300049EF0B /* LaunchScreen.xib */,
-				4823607C1AF6DC300049EF0B /* HealthCareProject.xcdatamodeld */,
 				482360781AF6DC300049EF0B /* Supporting Files */,
 			);
 			path = HealthCareProject;
@@ -93,6 +176,10 @@
 		482360781AF6DC300049EF0B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4823607C1AF6DC300049EF0B /* HealthCareProject.xcdatamodeld */,
+				482360861AF6DC300049EF0B /* LaunchScreen.xib */,
+				482360841AF6DC300049EF0B /* Images.xcassets */,
+				4823607A1AF6DC300049EF0B /* AppDelegate.swift */,
 				482360791AF6DC300049EF0B /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -113,6 +200,31 @@
 				482360921AF6DC310049EF0B /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		48529FCC1AF92A2A00141A63 /* Doctor */ = {
+			isa = PBXGroup;
+			children = (
+				48529F9D1AF8FB2D00141A63 /* DoctorLoginViewController.swift */,
+				48529F9F1AF8FB5200141A63 /* DocotorRegisterViewController.swift */,
+				48529FCA1AF928F800141A63 /* DoctorDetailsViewController.swift */,
+				48529FC41AF91C0600141A63 /* DoctorsTableViewController.swift */,
+				48529FC61AF91EAB00141A63 /* DoctorsTableViewCell.swift */,
+				48529FC81AF924F800141A63 /* Doctor.swift */,
+			);
+			name = Doctor;
+			sourceTree = "<group>";
+		};
+		48529FCD1AF92A9F00141A63 /* Drug */ = {
+			isa = PBXGroup;
+			children = (
+				4823609D1AF6F0930049EF0B /* DrugsTableViewController.swift */,
+				4861D7EE1AF7FBAF001C6BDC /* DetailsViewController.swift */,
+				4861D7EC1AF7D4FA001C6BDC /* AddDrugTableViewController.swift */,
+				4861D8491AF84683001C6BDC /* AddToMyListTableViewController.swift */,
+				4823609F1AF6F0C60049EF0B /* Drug.swift */,
+			);
+			name = Drug;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,9 +327,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				482360801AF6DC300049EF0B /* ViewController.swift in Sources */,
 				4823607E1AF6DC300049EF0B /* HealthCareProject.xcdatamodeld in Sources */,
+				4823609E1AF6F0930049EF0B /* DrugsTableViewController.swift in Sources */,
+				48529FC91AF924F800141A63 /* Doctor.swift in Sources */,
+				4861D7ED1AF7D4FA001C6BDC /* AddDrugTableViewController.swift in Sources */,
+				4861D84A1AF84683001C6BDC /* AddToMyListTableViewController.swift in Sources */,
 				4823607B1AF6DC300049EF0B /* AppDelegate.swift in Sources */,
+				48529F9E1AF8FB2D00141A63 /* DoctorLoginViewController.swift in Sources */,
+				482360A01AF6F0C60049EF0B /* Drug.swift in Sources */,
+				48529FA01AF8FB5200141A63 /* DocotorRegisterViewController.swift in Sources */,
+				48529FCB1AF928F800141A63 /* DoctorDetailsViewController.swift in Sources */,
+				48529FC51AF91C0600141A63 /* DoctorsTableViewController.swift in Sources */,
+				48529FC71AF91EAB00141A63 /* DoctorsTableViewCell.swift in Sources */,
+				4861D7EF1AF7FBAF001C6BDC /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,9 +464,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/iartist93/Desktop/NEW,
+					MACBOOK/Development/iOS/Video,
+					Tutorials/Parse,
+					"login/parse-library-1.7.2",
+					/Users/iartist93/Desktop/NEW,
+					MACBOOK/Development/iOS/Video,
+					Tutorials/Parse,
+					"login/parse-library-1.7.2",
+				);
 				INFOPLIST_FILE = HealthCareProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -352,9 +486,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/iartist93/Desktop/NEW,
+					MACBOOK/Development/iOS/Video,
+					Tutorials/Parse,
+					"login/parse-library-1.7.2",
+					/Users/iartist93/Desktop/NEW,
+					MACBOOK/Development/iOS/Video,
+					Tutorials/Parse,
+					"login/parse-library-1.7.2",
+				);
 				INFOPLIST_FILE = HealthCareProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -411,6 +557,7 @@
 				482360991AF6DC310049EF0B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4823609A1AF6DC310049EF0B /* Build configuration list for PBXNativeTarget "HealthCareProjectTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +566,7 @@
 				4823609C1AF6DC310049EF0B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
