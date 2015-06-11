@@ -54,5 +54,12 @@ class DetailsViewController: UIViewController {
     //MARK: Segue
     @IBAction func close(segue: UIStoryboardSegue) {}
     
-    
+    //saveToMyList
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "saveToMyList" {
+            if let dvc = segue.destinationViewController as? AddDrugTableViewController {
+                dvc.navigationItem.title = self.navigationItem.title
+            }
+        }
+    }
 }

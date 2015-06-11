@@ -37,11 +37,11 @@ class DocotorRegisterViewController: UIViewController {
         var password = self.passwordField.text
         var email = self.emailField.text
         
-        if username.utf16Count < 4 || password.utf16Count < 5 {
+        if count(username.utf16) < 4 || count(password.utf16) < 5  {
             var alert = UIAlertView(title: "Invalid", message: "Username must be greater than 4 and password must be greater than 5", delegate: self, cancelButtonTitle: "OK")
             
             alert.show()
-        } else if emailField.text.utf16Count < 8 {
+        } else if count(emailField.text.utf16) < 8 {
             var alert = UIAlertView(title: "Invalid", message: "Email must be greater than 8", delegate: self, cancelButtonTitle: "OK")
             
             alert.show()
@@ -60,9 +60,9 @@ class DocotorRegisterViewController: UIViewController {
                     alert.show()
                 }
             })
-            //self.saveInCoreData(username, email: email, password: password)
+            self.saveInCoreData(username, email: email, password: password)
             //self.saveInUserDefault(username)
-            self.performSegueWithIdentifier("showDoctorsTableView", sender: self)
+            self.performSegueWithIdentifier("showDrugsTableView", sender: self)
         }
     }
 
@@ -70,9 +70,9 @@ class DocotorRegisterViewController: UIViewController {
     
     func saveInCoreData(userName: String, email: String, password: String)
     {
-        if let managedObjectContext = (UIApplication.sharedApplication().delegate as AppDelegate).managedObjectContext {
+        if let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext {
             
-            doctor = NSEntityDescription.insertNewObjectForEntityForName("Doctor", inManagedObjectContext: managedObjectContext) as Doctor
+            doctor = NSEntityDescription.insertNewObjectForEntityForName("Doctor", inManagedObjectContext: managedObjectContext) as! Doctor
             
             doctor.userName = userName
             doctor.email = email

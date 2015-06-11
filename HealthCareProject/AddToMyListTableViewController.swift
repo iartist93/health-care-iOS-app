@@ -7,32 +7,50 @@
 //
 
 import UIKit
+import CoreData
 
 class AddToMyListTableViewController: UITableViewController {
+
+    @IBOutlet weak var startTime: UIDatePicker!
+    @IBOutlet weak var numberOfCapsPerDay: UILabel!
+    @IBOutlet weak var snooze: UISwitch!
     
-    var cellIsHidden = false
-    var indexPath = NSIndexPath(forRow: 2, inSection: 0)
+    
+    var listItem: ListItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        self.navigationItem.title = "Add To List"
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-
-    // MARK: - Table view data source
-
-    @IBAction func setAutomaticallySwitchTrigger(sender: AnyObject)
-    {
+    
+    //MARK: Instance Methods
+    @IBAction func save() {
+        var drugName = self.navigationItem.title
         
+        if let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext {
+            
+            listItem = NSEntityDescription.insertNewObjectForEntityForName("ListItem", inManagedObjectContext: managedObjectContext) as! ListItem
+            listItem.drugName = drugName
+            listItem.capsNumber = numberOfCapsPerDay.text?.toInt()
+            listItem.startDate = startTime.date
+            if snooze.on { listItem.snooze = 1 }
+            else { listItem.snooze = 0 }
+            
+            var e: NSError?
+            if managedObjectContext.save(&e) != true {
+                println("insert error: \(e!.localizedDescription)")
+                return
+            }
+        }
+        
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
+    
+    
     
 }

@@ -32,13 +32,13 @@ class DrugsTableViewController: UITableViewController, NSFetchedResultsControlle
         var sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
         fetchRequest.sortDescriptors = [sortDescriptor]
         
-        if let managedObjectContext = (UIApplication.sharedApplication().delegate as AppDelegate).managedObjectContext
+        if let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
         {
             fetchedResultController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: managedObjectContext, sectionNameKeyPath: nil, cacheName: nil)
             fetchedResultController.delegate = self
             var e: NSError?
             var result = fetchedResultController.performFetch(&e)
-            localDrugs = fetchedResultController.fetchedObjects as [Drug]
+            localDrugs = fetchedResultController.fetchedObjects as! [Drug]
             if result != true
             {
                 println(e!.localizedDescription)
@@ -78,7 +78,7 @@ class DrugsTableViewController: UITableViewController, NSFetchedResultsControlle
         
         let cellIdentifier = "Cell"
         
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! UITableViewCell
         
         let drug = (searchController.active) ? searchResult[indexPath.row] : localDrugs[indexPath.row]
         cell.textLabel?.text = drug.name
@@ -95,7 +95,7 @@ class DrugsTableViewController: UITableViewController, NSFetchedResultsControlle
     
     func controller(controller: NSFetchedResultsController, didChangeObject anObject: AnyObject, atIndexPath indexPath: NSIndexPath?, forChangeType type: NSFetchedResultsChangeType, newIndexPath: NSIndexPath?) {
         
-        localDrugs = controller.fetchedObjects as [Drug]
+        localDrugs = controller.fetchedObjects as! [Drug]
         
         switch type {
         case .Insert:
@@ -150,7 +150,6 @@ class DrugsTableViewController: UITableViewController, NSFetchedResultsControlle
             }
         }
     }
-    
     
     @IBAction func unwindSegue(segue: UIStoryboardSegue) {}
 }

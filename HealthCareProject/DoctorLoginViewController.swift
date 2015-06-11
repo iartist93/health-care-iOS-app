@@ -34,21 +34,17 @@ class DoctorLoginViewController: UIViewController {
         var password = self.passwordField.text
         
         // If the username and password length > 4
-        if username.utf16Count < 4 || password.utf16Count < 5
+        if count(username.utf16) < 4 || count(password.utf16) < 5
         {
             var alert = UIAlertView(title: "Invalid", message: "Username must be greater than 4 and password must be greater than 5", delegate: self, cancelButtonTitle: "OK")
             
             alert.show()
-        }
-        else
-        {
+        } else {
             self.activityIndicator.startAnimating()
             PFUser.logInWithUsernameInBackground(username, password: password, block: { (user, error) -> Void in
                 self.activityIndicator.stopAnimating()
                 if user != nil {
-                    NSUserDefaults.standardUserDefaults().setObject(username, forKey: "doctorUserName")
-                    NSUserDefaults.standardUserDefaults().setObject(true, forKey: "isDoctorLoggedIn")
-                    NSUserDefaults.standardUserDefaults().synchronize()
+                    //self.saveToUserDefaults(username)
                     self.dismissViewControllerAnimated(true, completion: nil)
                 }
                 else {
@@ -57,6 +53,13 @@ class DoctorLoginViewController: UIViewController {
                 }
             })
         }
+    }
+    
+    func saveToUserDefaults(username: String)
+    {
+        NSUserDefaults.standardUserDefaults().setObject(username, forKey: "doctorUserName")
+        NSUserDefaults.standardUserDefaults().setObject(true, forKey: "isDoctorLoggedIn")
+        NSUserDefaults.standardUserDefaults().synchronize()
     }
     
     //MARK: Segues

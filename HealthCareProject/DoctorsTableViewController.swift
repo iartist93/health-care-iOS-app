@@ -25,17 +25,19 @@ class DoctorsTableViewController: UITableViewController, NSFetchedResultsControl
         var sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
         fetchRequest.sortDescriptors = [sortDescriptor]
         
-        if let managedObjectContext = (UIApplication.sharedApplication().delegate as AppDelegate).managedObjectContext
+        if let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
         {
             fetchedResultController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: managedObjectContext, sectionNameKeyPath: nil, cacheName: nil)
             fetchedResultController.delegate = self
             var e: NSError?
             var result = fetchedResultController.performFetch(&e)
-            doctors = fetchedResultController.fetchedObjects as [Doctor]
+            doctors = fetchedResultController.fetchedObjects as! [Doctor]
             if result != true
             {
                 println(e!.localizedDescription)
             }
+            
+            //println("Doctors = \(doctors) And count = \(doctors.count)")
         }
         
         //Seach Controller
@@ -56,9 +58,8 @@ class DoctorsTableViewController: UITableViewController, NSFetchedResultsControl
         
         if !isUserLoggedIn
         {
-            self.performSegueWithIdentifier("doctorLoginSegue", sender: self)
+            //self.performSegueWithIdentifier("doctorLoginSegue", sender: self)
         }
-
     }
     
     override func prefersStatusBarHidden() -> Bool {
@@ -79,17 +80,21 @@ class DoctorsTableViewController: UITableViewController, NSFetchedResultsControl
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
         
         let cellIdentifier = "Cell"
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as DoctorsTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! DoctorsTableViewCell
     
         let doctor = (searchController.active) ? searchResult[indexPath.row] : doctors[indexPath.row]
+        
+        
+        println(doctor.name)
+        
         cell.nameLabel.text = doctor.name
         cell.specializationLabel.text = doctor.spectialziation
         cell.locationLabel.text = doctor.location
-        cell.drImage.image = UIImage(data: doctor.image)
+        //cell.drImage.image = UIImage(data: doctor.image)
         
-        cell.drImage.layer.cornerRadius = cell.drImage.frame.size.width / 2
-        cell.drImage.clipsToBounds = true
-    
+        //cell.drImage.layer.cornerRadius = cell.drImage.frame.size.width / 2
+        //cell.drImage.clipsToBounds = true
+
         return cell
     }
 
@@ -100,7 +105,7 @@ class DoctorsTableViewController: UITableViewController, NSFetchedResultsControl
     
     func controller(controller: NSFetchedResultsController, didChangeObject anObject: AnyObject, atIndexPath indexPath: NSIndexPath?, forChangeType type: NSFetchedResultsChangeType, newIndexPath: NSIndexPath?) {
         
-        doctors = controller.fetchedObjects as [Doctor]
+        doctors = controller.fetchedObjects as! [Doctor]
         
         switch type {
         case .Insert:
@@ -120,7 +125,6 @@ class DoctorsTableViewController: UITableViewController, NSFetchedResultsControl
             tableView.reloadData()
         }
     }
-    
     
     func controllerDidChangeContent(controller: NSFetchedResultsController) {
         tableView.endUpdates()
@@ -157,8 +161,4 @@ class DoctorsTableViewController: UITableViewController, NSFetchedResultsControl
         filterContentForSearchText(searchText)
         tableView.reloadData()
     }
-    
-    
-    
-    
 }

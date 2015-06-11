@@ -61,9 +61,9 @@ class AddDrugTableViewController: UITableViewController {
         }
         
         
-        if let managedObjectContext = (UIApplication.sharedApplication().delegate as AppDelegate).managedObjectContext {
+        if let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext {
             
-            drug = NSEntityDescription.insertNewObjectForEntityForName("Drug", inManagedObjectContext: managedObjectContext) as Drug
+            drug = NSEntityDescription.insertNewObjectForEntityForName("Drug", inManagedObjectContext: managedObjectContext) as! Drug
             
             drug.name = nameField.text
             drug.desciption = descriptionField.text
